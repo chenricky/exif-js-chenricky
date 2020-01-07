@@ -26,6 +26,7 @@ window.addEventListener('load', function() {
       if (this.files && this.files[0]) {
           var img = document.querySelector('img');  // $('img')[0]
           img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+          console.log(img.src);
           img.onload = imageIsLoaded;
       }
   });
@@ -33,7 +34,7 @@ window.addEventListener('load', function() {
 
 function imageIsLoaded() { 
   //alert(this.src);  // blob url
-  console.log("image is loaded");
+  //console.log("image is loaded");
   // update width and height ...
 }
 
@@ -50,7 +51,7 @@ function imageIsLoaded() {
                 console.log(myData.exifdata);
 
                 document.getElementById('pic-info').innerHTML = 'This photo was taken on ' + myData.exifdata.DateTime + ' with a ' + myData.exifdata.Make + ' ' + myData.exifdata.Model;
-                
+            
                 if (myData.exifdata.GPSLatitude) {
                 // Calculate latitude decimal
                 var latDegree = myData.exifdata.GPSLatitude[0].numerator;
@@ -114,6 +115,7 @@ function imageIsLoaded() {
                 });
             }
         }
+    
     </script>
 </body>
 </html>

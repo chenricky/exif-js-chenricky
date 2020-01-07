@@ -1,3 +1,7 @@
+# Read this first
+https://www.webtrickshome.com/faq/how-to-display-uploaded-image-in-html-using-javascript
+
+
 # Exif.js
 
 A JavaScript library for reading [EXIF meta data](https://en.wikipedia.org/wiki/Exchangeable_image_file_format) from image files.
